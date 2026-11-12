@@ -1,0 +1,122 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>Madhumathi S – Student Portfolio</title>
+<meta name="description" content="Portfolio of Madhumathi S, a B.E. Computer Science and Engineering student at SRM VEC.">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link href="https://fonts.googleapis.com/css2?family=Bricolage+Grotesque:opsz,wght@12..96,400;12..96,700;12..96,800&family=Source+Serif+4:wght@400;600&display=swap" rel="stylesheet">
+<style>
+  :root {
+    --paper: #eef3f8;
+    --ink: #14213d;
+    --muted: #52607a;
+    --grid: #cbd8e6;
+    --mark: #ffd84d;
+    --link: #2a5bd7;
+    --card: #ffffff;
+  }
+  * { box-sizing: border-box; }
+  html { scroll-behavior: smooth; }
+  body {
+    margin: 0;
+    background-color: var(--paper);
+    background-image:
+      linear-gradient(var(--grid) 1px, transparent 1px),
+      linear-gradient(90deg, var(--grid) 1px, transparent 1px);
+    background-size: 32px 32px;
+    color: var(--ink);
+    font-family: "Source Serif 4", Georgia, serif;
+    font-size: 1.125rem;
+    line-height: 1.65;
+  }
+  h1, h2, nav, .btn { font-family: "Bricolage Grotesque", system-ui, sans-serif; }
+  a:focus-visible { outline: 3px solid var(--ink); outline-offset: 3px; }
+
+  header.top { position: sticky; top: 0; z-index: 10; background: var(--paper); border-bottom: 2px solid var(--ink); }
+  nav { max-width: 880px; margin: 0 auto; padding: .75rem 1.25rem; display: flex; justify-content: space-between; align-items: center; flex-wrap: wrap; gap: .5rem; }
+  nav .brand { font-weight: 800; text-decoration: none; color: var(--ink); }
+  nav ul { list-style: none; display: flex; gap: 1.25rem; margin: 0; padding: 0; }
+  nav ul a { color: var(--ink); text-decoration: none; font-weight: 600; }
+  nav ul a:hover { text-decoration: underline; text-decoration-thickness: 3px; text-decoration-color: var(--mark); }
+
+  main { max-width: 880px; margin: 0 auto; padding: 0 1.25rem 4rem; }
+  section { padding: 4rem 0 1rem; }
+
+  .hero { padding-top: 5rem; }
+  .hero h1 { font-size: clamp(2.6rem, 8vw, 5rem); line-height: 1.02; letter-spacing: -0.03em; margin: 0 0 1rem; font-weight: 800; }
+  .hero p { max-width: 36rem; margin: 0 0 1.75rem; font-size: 1.25rem; }
+  .btn {
+    display: inline-block; padding: .7rem 1.2rem; font-weight: 700; text-decoration: none;
+    border: 2px solid var(--ink); background: var(--mark); color: var(--ink); border-radius: 6px;
+    box-shadow: 3px 3px 0 var(--ink); transition: transform .12s, box-shadow .12s;
+  }
+  .btn:hover { transform: translate(2px, 2px); box-shadow: 1px 1px 0 var(--ink); }
+
+  h2 { font-size: 1.9rem; margin: 0 0 1rem; letter-spacing: -0.02em; }
+  .note { background: var(--card); border: 2px solid var(--ink); padding: 1.25rem 1.5rem; border-radius: 6px; }
+  .note p { margin: 0 0 .75rem; max-width: 62ch; }
+  .note p:last-child { margin: 0; }
+  .empty { border: 2px dashed var(--ink); border-radius: 6px; padding: 1.25rem 1.5rem; background: var(--paper); color: var(--muted); }
+  .empty p { margin: 0; max-width: 62ch; }
+
+  footer { border-top: 2px solid var(--ink); background: var(--paper); text-align: center; padding: 1.5rem 1rem; font-family: "Bricolage Grotesque", system-ui, sans-serif; font-weight: 700; }
+
+  @media (prefers-reduced-motion: reduce) { html { scroll-behavior: auto; } .btn { transition: none; } }
+</style>
+</head>
+<body>
+
+<header class="top">
+  <nav aria-label="Main">
+    <a class="brand" href="#top">Madhumathi S</a>
+    <ul>
+      <li><a href="#about">About</a></li>
+      <li><a href="#projects">Projects</a></li>
+      <li><a href="#skills">Skills</a></li>
+    </ul>
+  </nav>
+</header>
+
+<main id="top">
+
+  <section class="hero">
+    <h1>Hi, I'm Madhumathi S.</h1>
+    <p>I'm a B.E. Computer Science and Engineering student at SRM VEC. I'm learning how software and computers work, one step at a time.</p>
+    <a class="btn" href="#about">About me</a>
+  </section>
+
+  <section id="about">
+    <h2>About me</h2>
+    <div class="note">
+      <p>I'm studying B.E. Computer Science and Engineering at SRM VEC. I'm curious about technology and enjoy learning new things.</p>
+      <p>I'm at the start of my journey, and I'm building this website to track my progress as I grow.</p>
+    </div>
+  </section>
+
+  <section id="projects">
+    <h2>Projects</h2>
+    <div class="empty">
+      <p>I don't have any projects yet. I'm still learning, and this space will fill up as I start building.</p>
+    </div>
+  </section>
+
+  <section id="skills">
+    <h2>Skills</h2>
+    <div class="empty">
+      <p>I haven't listed any skills yet. I'll add them here as I learn and practice.</p>
+    </div>
+  </section>
+
+</main>
+
+<footer>
+  <span id="year"></span> Madhumathi S
+</footer>
+
+<script>
+  document.getElementById("year").textContent = "© " + new Date().getFullYear();
+</script>
+</body>
+</html>
